@@ -1,0 +1,11 @@
+COACH JOHN : BACKEND (API + chat temps réel)
+===========================================
+Lancer :   npm install  &&  npm start        -> http://localhost:3000   (API sous /api, WebSocket sous /socket.io)
+Base :     adresse Neon dans .env (DATABASE_URL). Tables : exécuter db/script.sql dans le SQL Editor de Neon (une seule fois).
+           Sans DATABASE_URL : PostgreSQL local (DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME).
+Variables : DATABASE_URL, JWT_SECRET, CORS_ORIGIN (adresse du site front quand il est hébergé ailleurs), PORT (imposé par l'hébergeur).
+Santé :    GET /api/sante
+
+Déployer sur Render : render.yaml (New > Blueprint). Renseigne DATABASE_URL, puis CORS_ORIGIN = adresse du front.
+Ne mets JAMAIS .env sur GitHub (déjà exclu par .gitignore).
+Comptes de test : admin/admin · client_x/client · test01/user · test02/user  (à changer avant la mise en ligne)
